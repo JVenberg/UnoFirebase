@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+Name: Jack Venberg
+Date: 05.14.18
+Section: CSE 154 AH
+
+This is the index.html page for my Creative Project in which I have a Uno game
+that connects to a custom-built Uno API. This page contains the two players
+hands and the two card piles, as well as, information about each play.
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Uno</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="uno.css">
+    <script src="main.js"></script>
+    <script src="uno.js"></script>
+  </head>
+  <body>
+    <div class="background-top"></div>
+    <main>
+      <article id="table">
+        <h1>UNO Card Game</h1>
+        <h2>Opponents Hand</h2>
+        <section id="opponent" class="hand"></section>
+        
+        <h2>Results</h2>
+        <section id="results"></section>
+
+        <section id="deck" class="card-deck">
+          <div id="discard" class="uno blank hidden"></div>
+          <div id="pile" class="uno back hidden"></div>
+          <div id="topPile" class="uno back hidden"></div>
+        </section>
+        
+        <section id="start-new" class="hidden">
+          <h2>Start New Game</h2>
+        </section>
+
+        <section id="color-picker" class="hidden">
+          <h3>Pick a Color</h3>
+          <div>
+            <div class="color" id="red"></div>
+            <div class="color" id="yellow"></div>
+            <div class="color" id="green"></div>
+            <div class="color" id="blue"></div>
+          </div>
+        </section>
+
+        <h2>Your Hand</h2>
+        <section id="player" class="hand"></section>
+      </article>
+      <footer>
+        <p>Created by Jack Venberg &copy; 2018</p>
+      </footer>
+    </main>
+  </body>
+</html>

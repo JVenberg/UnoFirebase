@@ -1,0 +1,105 @@
+/*
+Name: Jack Venberg
+Date: 05.14.18
+Section: CSE 154 AH
+
+This is the main.css style for my Creative Project in which I have a Uno game
+that connects to a custom-built uno API. This style is applied to all pages.
+*/
+
+* {
+  margin: 0;
+}
+
+html, body, button {
+  font-family: helvetica, sans-serif;
+  padding: 0;
+  height: 100%;
+  background-color: #E0E0E0;
+}
+
+header {
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+html, body, a, .nav-change > .active, .nav-change a:hover {
+  text-decoration: none;
+  color: #212121;
+}
+
+footer, nav, .background-top {
+  width: 100%;
+}
+
+footer {
+  background: #1976D2;
+  line-height: 80px;
+}
+
+footer, nav a {
+  text-align: center;
+}
+
+nav {
+  z-index: 1;
+  display: flex;
+}
+
+nav, .card {
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+  padding: 20px 30px;
+  font-size: 1.1em;
+}
+
+nav {
+  transition: background-color 0.5s ease;
+}
+
+nav a:hover, .active {
+  background-color: #E53935;
+}
+
+nav, .background-top {
+  position: fixed;
+}
+
+.grow {
+  transition: all .3s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+}
+
+.nav-change {
+  background-color: #D32F2F;
+}
+
+nav, .nav-change a:hover, .nav-change .active, main {
+  background-color: #FAFAFA;
+}
+
+footer, .active, nav a:hover, .nav-change a {
+  color: white;
+}
+
+.background-top {
+  background-color: #EF5350;
+  height: 55%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  top: 0;
+}
+
+main {
+  position: absolute;
+  top: 100px;
+  width: 70%;
+  right: 15%;
+}

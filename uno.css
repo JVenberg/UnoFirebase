@@ -1,0 +1,196 @@
+/*
+Name: Jack Venberg
+Date: 05.14.18
+Section: CSE 154 AH
+
+This is the main.css style for my Creative Project in which I have a Uno game
+that connects to a custom-built Uno API. This script contains styling
+information for the index.html page.
+*/
+
+main > article {
+  padding-bottom: 10px;
+  height: 70%;
+}
+
+h1, h2, p, #color-picker {
+  text-align: center;
+}
+
+#color-picker .color {
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+}
+
+#color-picker .color, #start-new {
+  cursor: pointer;
+}
+
+#color-picker > div, .hand, .card-deck {
+  display: flex;
+  justify-content: center;
+}
+
+#red, #start-new {
+  background-color: #F55;
+}
+
+#yellow {
+  background-color: #FA0;
+}
+
+#green {
+  background-color: #5A5;
+}
+
+#blue {
+  background-color: #55F;
+}
+
+#start-new {
+  box-shadow: 2px 2px 2px black;
+  border-radius: 10px;
+  margin: 10px auto;
+  width: 200px;
+}
+
+#start-new:active {
+  box-shadow: inset 1px 1px 2px black;
+}
+
+#start-new, h1 {
+  color: white;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  background-color: #1976D2;
+  padding: 10px 0;
+}
+
+h2, button {
+  font-size: 30px;
+}
+
+button {
+  position: relative;
+  margin: 0 auto;
+}
+
+.uno, #topPile {
+  transition: top 0.3s, left 0.3s;
+}
+
+.uno {
+  width: 242px;
+  height: 362px;
+  transform: scale(0.3);
+  margin: calc(-363px * (1 - 0.3) / 2 + 5px) calc(((-243px * (1 - 0.3)) / 2) + 5px);
+  background-image: url('UNO_deck.svg');
+  background-repeat: no-repeat;
+  background-size: 3644px 1814px;
+}
+
+.blank {
+  visibility: hidden;
+}
+
+#topPile {
+  right: 100px;
+  position: absolute;
+}
+
+.hand, .card-deck {
+  padding: 10px;
+  flex-wrap: wrap;
+  min-height: 110px;
+}
+
+.hidden {
+  display: none;
+}
+
+.num0 {
+  background-position-x: calc(-243px * 0);
+}
+
+.num1 {
+  background-position-x: calc(-243px * 1);
+}
+
+.num2 {
+  background-position-x: calc(-243px * 2);
+}
+
+.num3 {
+  background-position-x: calc(-243px * 3);
+}
+
+.num4 {
+  background-position-x: calc(-243px * 4);
+}
+
+.num5 {
+  background-position-x: calc(-243px * 5);
+}
+
+.num6 {
+  background-position-x: calc(-243px * 6);
+}
+
+.num7 {
+  background-position-x: calc(-243px * 7);
+}
+
+.num8 {
+  background-position-x: calc(-243px * 8);
+}
+
+.num9 {
+  background-position-x: calc(-243px * 9);
+}
+
+.skip {
+  background-position-x: calc(-243px * 10);
+}
+
+.reverse {
+  background-position-x: calc(-243px * 11);
+}
+
+.draw2 {
+  background-position-x: calc(-243px * 12);
+}
+
+.wild {
+  background-position-y: calc(-363px * 4);
+  background-position-x: calc(-243px * 13);
+}
+
+.wildDraw4 {
+  background-position-y: calc(-363px * 4);
+  background-position-x: calc(-243px * 14);
+}
+
+.back {
+  background-position-y: calc(-363px * 4);
+  background-position-x: calc(-243px * 12);
+}
+
+.red {
+  background-position-y: calc(-363px * 0);
+}
+
+.yellow {
+  background-position-y: calc(-363px * 1);
+}
+
+.green {
+  background-position-y: calc(-363px * 2);
+}
+
+.blue {
+  background-position-y: calc(-363px * 3);
+}
