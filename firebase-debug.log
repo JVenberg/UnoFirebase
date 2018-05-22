@@ -1,0 +1,137 @@
+[debug] [2018-05-22T20:07:27.122Z] ----------------------------------------------------------------------
+[debug] [2018-05-22T20:07:27.125Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-05-22T20:07:27.125Z] CLI Version:   3.18.4
+[debug] [2018-05-22T20:07:27.125Z] Platform:      darwin
+[debug] [2018-05-22T20:07:27.125Z] Node Version:  v10.1.0
+[debug] [2018-05-22T20:07:27.125Z] Time:          Tue May 22 2018 13:07:27 GMT-0700 (PDT)
+[debug] [2018-05-22T20:07:27.125Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-22T20:07:27.135Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-22T20:07:27.135Z] > authorizing via signed-in user
+[debug] [2018-05-22T20:07:27.137Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/uno-game-eae38  
+  
+ Tue May 22 2018 13:07:27 GMT-0700 (PDT)
+[debug] [2018-05-22T20:07:27.482Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T20:07:27.483Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/uno-game-eae38/tokens  
+  
+ Tue May 22 2018 13:07:27 GMT-0700 (PDT)
+[debug] [2018-05-22T20:07:27.796Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'uno-game-eae38'...
+[info] 
+[info] i  deploying database, firestore, functions, hosting
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] ✔  functions: Finished running predeploy script.
+[info] i  database: checking rules syntax...
+[debug] [2018-05-22T20:07:30.576Z] >>> HTTP REQUEST PUT https://uno-game-eae38.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+ 
+ Tue May 22 2018 13:07:30 GMT-0700 (PDT)
+[debug] [2018-05-22T20:07:30.807Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules syntax for database uno-game-eae38 is valid
+[info] i  firestore: checking firestore.rules for compilation errors...
+[debug] [2018-05-22T20:07:30.809Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/uno-game-eae38:test  
+ { source: { files: [ [Object] ] } } 
+ Tue May 22 2018 13:07:30 GMT-0700 (PDT)
+[debug] [2018-05-22T20:07:31.175Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2018-05-22T20:07:31.177Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "~5.12.0",
+    "firebase-functions": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.0",
+    "eslint-plugin-promise": "^3.6.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2018-05-22T20:07:31.178Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/uno-game-eae38?view=CONSUMER_VIEW  
+  
+ Tue May 22 2018 13:07:31 GMT-0700 (PDT)
+[debug] [2018-05-22T20:07:31.179Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/uno-game-eae38?view=CONSUMER_VIEW  
+  
+ Tue May 22 2018 13:07:31 GMT-0700 (PDT)
+[debug] [2018-05-22T20:07:31.683Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T20:07:31.758Z] <<< HTTP RESPONSE 200
+[warn] ⚠  functions: missing necessary APIs. Enabling now...
+[debug] [2018-05-22T20:07:31.759Z] >>> HTTP REQUEST PATCH https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/uno-game-eae38?updateMask=usageSettings  
+ { usageSettings: { consumerEnableStatus: 'ENABLED' } } 
+ Tue May 22 2018 13:07:31 GMT-0700 (PDT)
+[debug] [2018-05-22T20:07:32.711Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T20:07:42.717Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/uno-game-eae38?view=CONSUMER_VIEW  
+  
+ Tue May 22 2018 13:07:42 GMT-0700 (PDT)
+[debug] [2018-05-22T20:07:43.259Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
+[debug] [2018-05-22T20:07:53.261Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/uno-game-eae38?view=CONSUMER_VIEW  
+  
+ Tue May 22 2018 13:07:53 GMT-0700 (PDT)
+[debug] [2018-05-22T20:07:53.712Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
+[debug] [2018-05-22T20:08:03.718Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/uno-game-eae38?view=CONSUMER_VIEW  
+  
+ Tue May 22 2018 13:08:03 GMT-0700 (PDT)
+[debug] [2018-05-22T20:08:04.250Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
+[debug] [2018-05-22T20:08:14.251Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/uno-game-eae38?view=CONSUMER_VIEW  
+  
+ Tue May 22 2018 13:08:14 GMT-0700 (PDT)
+[debug] [2018-05-22T20:08:14.798Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
+[debug] [2018-05-22T20:08:24.802Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/uno-game-eae38?view=CONSUMER_VIEW  
+  
+ Tue May 22 2018 13:08:24 GMT-0700 (PDT)
+[debug] [2018-05-22T20:08:25.346Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
+[debug] [2018-05-22T20:08:35.349Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/uno-game-eae38?view=CONSUMER_VIEW  
+  
+ Tue May 22 2018 13:08:35 GMT-0700 (PDT)
+[debug] [2018-05-22T20:08:35.829Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
+[debug] [2018-05-22T20:08:45.833Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/uno-game-eae38?view=CONSUMER_VIEW  
+  
+ Tue May 22 2018 13:08:45 GMT-0700 (PDT)
+[debug] [2018-05-22T20:08:46.334Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
+[debug] [2018-05-22T20:08:56.338Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/uno-game-eae38?view=CONSUMER_VIEW  
+  
+ Tue May 22 2018 13:08:56 GMT-0700 (PDT)
+[debug] [2018-05-22T20:08:56.801Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
+[debug] [2018-05-22T20:09:06.803Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/uno-game-eae38?view=CONSUMER_VIEW  
+  
+ Tue May 22 2018 13:09:06 GMT-0700 (PDT)
+[debug] [2018-05-22T20:09:07.330Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
+[debug] [2018-05-22T20:09:17.333Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/uno-game-eae38?view=CONSUMER_VIEW  
+  
+ Tue May 22 2018 13:09:17 GMT-0700 (PDT)
+[debug] [2018-05-22T20:09:17.803Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
+[debug] [2018-05-22T20:09:27.809Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/uno-game-eae38?view=CONSUMER_VIEW  
+  
+ Tue May 22 2018 13:09:27 GMT-0700 (PDT)
+[debug] [2018-05-22T20:09:28.325Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
+[debug] [2018-05-22T20:09:38.329Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/uno-game-eae38?view=CONSUMER_VIEW  
+  
+ Tue May 22 2018 13:09:38 GMT-0700 (PDT)
+[debug] [2018-05-22T20:09:38.665Z] <<< HTTP RESPONSE 200
+[info] i  functions: waiting for APIs to activate...
